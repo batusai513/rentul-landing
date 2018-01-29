@@ -2,7 +2,8 @@ import React from "react";
 import Link from "gatsby-link";
 import Feature from "../components/Feature";
 
-function IndexPage() {
+function IndexPage(props) {
+  console.warn(props);
   return (
     <div>
       <h2>
@@ -61,8 +62,39 @@ function IndexPage() {
           </p>
         </div>
       </section>
+
+      <section>
+        <h2>¿Por qué los clientes no le pagan a su proveedor?</h2>
+        <p>70%</p>
+        <p>
+          No es una prioridad: otras empresas le proveen lo mismo, o ya no
+          necesita su producto.{" "}
+        </p>
+        <p>15%</p>
+        <p>Piensa que puede esperar</p>
+        <p>10%</p>
+        <p>Cree que no tiene forma, conocimiento ni dinero para demandarlo</p>
+        <p>5%</p>
+        <p>Realmente no tiene con qué</p>
+      </section>
+
+      <section>
+        <h3>Recupere su dinero</h3>
+        <p>Mantenga su cartera al día</p>
+        <Link>Únete ahora</Link>
+      </section>
     </div>
   );
 }
 
 export default IndexPage;
+
+export const query = graphql`
+  query homeQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;

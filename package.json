@@ -11,6 +11,8 @@
     "gatsby-plugin-emotion": "^1.1.11",
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-plugin-typography": "^1.7.12",
+    "gatsby-source-filesystem": "^1.5.15",
+    "gatsby-transformer-remark": "^1.7.30",
     "react-helmet": "^5.2.0",
     "typography": "^0.16.6"
   },
