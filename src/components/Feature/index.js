@@ -19,7 +19,7 @@ export default function Feature({ title, body }) {
     <Container>
       <h3 className={titleCss}>{title}</h3>
       <p>{body}</p>
-      <Button>+</Button>
+      <Button isRounded>+</Button>
     </Container>
   );
 }

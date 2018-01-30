@@ -41,46 +41,16 @@ const base = css`
     cursor: not-allowed;
     pointer-events: none;
     box-shadow: none;
-  }
-  }
-
-  .button--link {
-  color: $link-color;
-  font-weight: normal;
-  cursor: pointer;
-  border-radius: 0;
-
-  &,
-  &:active,
-  &[disabled],
-  fieldset[disabled] & {
-    background-color: transparent;
-    box-shadow: none;
-  }
-  &,
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: transparent;
-  }
-  &:hover,
-  &:focus {
-    color: $link-hover-color;
-    text-decoration: underline;
-    background-color: transparent;
-  }
-  &[disabled],
-  fieldset[disabled] & {
-    &:hover,
-    &:focus {
-      color: $btn-link-disabled-color;
-      text-decoration: none;
     }
   }
 `;
 
-const primary = css`
+const primary = props => css`
   background-color: tomato;
 `;
 
-export const Button = styled("button")(base, primary)
+const rounded = props => css`
+  border-radius: 100px;
+`;
+
+export const Button = styled("button")(base, primary, rounded);
