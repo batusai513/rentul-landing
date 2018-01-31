@@ -1,7 +1,36 @@
 import React from "react";
 import styled, { css } from "react-emotion";
+import Color from "color";
 
-const base = css`
+export const Button = styled("button")(base, style, rounded, square);
+
+function style({ styles, theme }) {
+  switch (styles) {
+    case "primary":
+      return buttonStyle("white", theme.primaryColor, "", "1px");
+    default:
+      return "";
+  }
+}
+
+function rounded({ isRounded }) {
+  return isRounded
+    ? css`
+        border-radius: 100px;
+      `
+    : "";
+}
+
+function square({ isSquared }) {
+  return isSquared
+    ? css`
+        padding: 1rem;
+      `
+    : "";
+}
+
+function base(props) {
+  return css`
   text-transform: uppercase;
   padding: 1rem 0.8rem;
   font-size: 1rem;
@@ -44,13 +73,47 @@ const base = css`
     }
   }
 `;
+}
 
-const primary = props => css`
-  background-color: tomato;
-`;
-
-const rounded = props => css`
-  border-radius: 100px;
-`;
-
-export const Button = styled("button")(base, primary, rounded);
+function buttonStyle(
+  $color,
+  $background,
+  $border = "transparent",
+  $borderWidth
+) {
+  const hover = Color($background)
+    .darken(0.1)
+    .hsl()
+    .string();
+  return css`
+    color: ${$color};
+    border-width: ${$borderWidth};
+    border-color: ${$border};
+    background-color: ${$background};
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      color: ${$color};
+      border-color: ${$border == "transparent" ? $border : hover};
+      background-color: ${hover};
+    }
+    &:active,
+    &.active {
+      background-image: none;
+      background-color: ${hover};
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      &,
+      &:hover,
+      &:focus,
+      &:active,
+      &.active {
+        background-color: ${$background};
+        border-color: ${$border};
+      }
+    }
+  `;
+}

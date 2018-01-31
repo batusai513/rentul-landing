@@ -2,16 +2,12 @@ import React from "react";
 import styled, { css } from "react-emotion";
 import { Button } from "../Buttons";
 
-const container = css`
-  background-color: tomato;
-`;
-
 const titleCss = css`
   font-size: 30px;
 `;
 
-const Container = styled("div")(container, props => ({
-  backgroundColor: props.theme.primaryColor
+const Container = styled("div")(props => ({
+  
 }));
 
 export default function Feature({ title, body }) {
@@ -19,7 +15,9 @@ export default function Feature({ title, body }) {
     <Container>
       <h3 className={titleCss}>{title}</h3>
       <p>{body}</p>
-      <Button isRounded>+</Button>
+      <Button isRounded isSquared styles="primary">+</Button>
+      <Button isRounded styles="primary">+</Button>
+      <Button isSquared styles="primary">+</Button>
     </Container>
   );
 }

@@ -1,69 +1,40 @@
 import React from "react";
 import Link from "gatsby-link";
+import { css } from 'react-emotion';
+import { Flex, Box } from "grid-emotion";
+import Container from "../Container";
+import Navigation from './Navigation';
 
 const Header = () => (
-  <div
-    style={{
-      background: "rebeccapurple",
-      marginBottom: "1.45rem"
-    }}
+  <header
+    css={css`
+      background: transparent;
+      margin-bottom: 1.45rem;
+      position: absolute;
+      width: 100%;
+    `}
   >
-    <div
-      style={{
-        margin: "0 auto",
-        maxWidth: 960,
-        padding: "1.45rem 1.0875rem"
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: "white",
-            textDecoration: "none"
-          }}
-        >
-          Inicio
-        </Link>
-      </h1>
-      <Link
-        to="/"
-        style={{
-          color: "white",
-          textDecoration: "none"
-        }}
-      >
-        Inicio
-      </Link>
-      <Link
-        to="/planes"
-        style={{
-          color: "white",
-          textDecoration: "none"
-        }}
-      >
-        planes
-      </Link>
-      <Link
-        to="/faq"
-        style={{
-          color: "white",
-          textDecoration: "none"
-        }}
-      >
-        Preguntas frecuentes
-      </Link>
-      <Link
-        to="/"
-        style={{
-          color: "white",
-          textDecoration: "none"
-        }}
-      >
-        Ingreso de usuario
-      </Link>
-    </div>
-  </div>
+    <Container>
+      <Flex align="center" direction={['column', 'row']}>
+        <Box width={[ 1, 1/4, 1/3 ]}>
+          <h1 style={{ margin: 0 }}>
+            <Link
+              to="/"
+              style={{
+                color: "white",
+                textDecoration: "none"
+              }}
+            >
+              Inicio
+            </Link>
+          </h1>
+        </Box>
+        <Box width={[ 1, 3/4, 2/3 ]}>
+          <Navigation />
+        </Box>
+      </Flex>
+    </Container>
+  </header>
 );
 
 export default Header;

@@ -1,15 +1,13 @@
 import React from "react";
 import Link from "gatsby-link";
 import Feature from "../components/Feature";
+import Hero from '../components/Hero';
+import Container from "../components/Container";
 
 function IndexPage(props) {
-  console.warn(props);
   return (
     <div>
-      <h2>
-        Especialistas
-        <span> en cobranza</span>
-      </h2>
+      <Hero></Hero>
       <section>
         <Feature
           title="Procesos jurídicos"
@@ -81,7 +79,7 @@ function IndexPage(props) {
       <section>
         <h3>Recupere su dinero</h3>
         <p>Mantenga su cartera al día</p>
-        <Link>Únete ahora</Link>
+        <Link to='/'>Únete ahora</Link>
       </section>
     </div>
   );
