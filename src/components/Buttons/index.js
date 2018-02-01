@@ -24,7 +24,11 @@ function rounded({ isRounded }) {
 function square({ isSquared }) {
   return isSquared
     ? css`
-        padding: 1rem;
+        height: ${60 / 15}rem;
+        width: ${60 / 15}rem;
+        line-height: ${60 / 15}rem;
+        padding: 0;
+        text-align: center;
       `
     : "";
 }

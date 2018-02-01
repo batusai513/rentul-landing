@@ -1,27 +1,50 @@
 import React from "react";
 import Link from "gatsby-link";
+import { Box, Flex } from "grid-emotion";
 import Feature from "../components/Feature";
-import Hero from '../components/Hero';
+import Hero from "../components/Hero";
 import Container from "../components/Container";
 
 function IndexPage(props) {
   return (
     <div>
-      <Hero></Hero>
-      <section>
-        <Feature
-          title="Procesos jurídicos"
-          body="No espere a que su cliente se quede sin dinero"
-        />
-        <Feature
-          title="Cobranza Prejurídica y administrativa"
-          body="Mantenga su cartera al día"
-        />
-        <Feature
-          title="Rentul Inmobiliario"
-          body="Arrendamientos Derecho inmobiliario en general Administración de propiedad horizontal"
-        />
-      </section>
+      <Hero />
+      <Box is="section" py={[1, 2, 3, 4]}>
+        <Container>
+          <Flex wrap>
+            <Box width={[1, 1 / 2, 1 / 3]} px={2}>
+              <Feature
+                color="#FF5830"
+                title="Procesos jurídicos"
+                body={
+                  <span>
+                    No espere a que su cliente <br /> se quede sin dinero
+                  </span>
+                }
+              />
+            </Box>
+            <Box width={[1, 1 / 2, 1 / 3]} px={2}>
+              <Feature
+                color="#17A0EE"
+                title="Cobranza Prejurídica y administrativa"
+                body="Mantenga su cartera al día"
+              />
+            </Box>
+            <Box width={[1, 1, 1 / 3]} px={2}>
+              <Feature
+                color="#FFA330"
+                title="Rentul Inmobiliario"
+                body={
+                  <span>
+                    Arrendamientos Derecho <br /> inmobiliario en general <br />{" "}
+                    Administración de propiedad horizontal
+                  </span>
+                }
+              />
+            </Box>
+          </Flex>
+        </Container>
+      </Box>
 
       <section>
         <h2>No Pierda su capital</h2>
@@ -79,7 +102,7 @@ function IndexPage(props) {
       <section>
         <h3>Recupere su dinero</h3>
         <p>Mantenga su cartera al día</p>
-        <Link to='/'>Únete ahora</Link>
+        <Link to="/">Únete ahora</Link>
       </section>
     </div>
   );

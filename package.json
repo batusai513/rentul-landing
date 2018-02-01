@@ -10,6 +10,7 @@
     "emotion-theming": "^8.0.12",
     "facepaint": "^1.2.0",
     "gatsby": "^1.9.158",
+    "gatsby-cli": "^1.1.33",
     "gatsby-link": "^1.6.35",
     "gatsby-plugin-emotion": "^1.1.11",
     "gatsby-plugin-react-helmet": "^2.0.3",
