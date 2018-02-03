@@ -2,6 +2,7 @@ import React from "react";
 import styled, { css } from "react-emotion";
 import { Box } from "grid-emotion";
 import bg from "../../assets/images/main-banner.jpg";
+import { rem } from '../../utils/typography';
 
 const Container = styled(Box)`
   background-image: url(${bg});
@@ -12,7 +13,7 @@ const Container = styled(Box)`
 `;
 
 const text = css`
-  font-size: ${34 / 16}rem;
+  font-size: ${rem(34)};
   color: white;
   text-align: center;
   font-weight: 700;

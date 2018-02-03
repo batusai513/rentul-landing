@@ -33,3 +33,7 @@ const typography = new Typography({
 });
 
 export default typography;
+
+export function rem(size, base = 15) {
+  return `${(size / base).toFixed(3)}rem`;
+}

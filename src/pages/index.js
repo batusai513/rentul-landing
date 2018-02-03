@@ -3,6 +3,7 @@ import Link from "gatsby-link";
 import { Box, Flex } from "grid-emotion";
 import Feature from "../components/Feature";
 import Hero from "../components/Hero";
+import Capital from "../components/Capital";
 import Container from "../components/Container";
 
 function IndexPage(props) {
@@ -45,24 +46,12 @@ function IndexPage(props) {
           </Flex>
         </Container>
       </Box>
-
-      <section>
-        <h2>No Pierda su capital</h2>
-        <p>
-          Demandar a tiempo es indispensable para la pronta recuperación de su
-          dinero.
-        </p>
-        <h3>Si usted no demanda su cliente puede:</h3>
-        <ul>
-          <li>Declararse en insolvencia.</li>
-          <li>Ser demandado por otros proveedores.</li>
-          <li>Cambiar de domicilio.</li>
-          <li>Negar la deuda.</li>
-        </ul>
-      </section>
-      <div>
-        <p>Demande a su cliente cuando aún está comercialmente activo.</p>
-      </div>
+      <Capital />
+      <Container>
+        <div>
+          <p>Demande a su cliente cuando aún está comercialmente activo.</p>
+        </div>
+      </Container>
       <section>
         <div>
           <h3>Sin comisión</h3>

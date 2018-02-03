@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "react-emotion";
 import Color from "color";
+import { rem } from '../../utils/typography';
 
 export const Button = styled("button")(base, style, rounded, square);
 
@@ -24,9 +25,9 @@ function rounded({ isRounded }) {
 function square({ isSquared }) {
   return isSquared
     ? css`
-        height: ${60 / 15}rem;
-        width: ${60 / 15}rem;
-        line-height: ${60 / 15}rem;
+        height: ${rem(60)};
+        width: ${rem(60)};
+        line-height: ${rem(60)};
         padding: 0;
         text-align: center;
       `

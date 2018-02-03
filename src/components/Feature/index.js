@@ -4,9 +4,10 @@ import { Box } from 'grid-emotion';
 import Color from "color";
 import { Button } from "../Buttons";
 import Icon from "../Icon";
+import { rem } from '../../utils/typography';
 
 const titleCss = css`
-  font-size: ${24 / 16}rem;
+  font-size: ${rem(24)};
 `;
 
 const featureHead = css`
