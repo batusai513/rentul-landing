@@ -4,6 +4,7 @@ import { Box, Flex } from "grid-emotion";
 import Feature from "../components/Feature";
 import Hero from "../components/Hero";
 import Capital from "../components/Capital";
+import Alert from "../components/Alert";
 import Container from "../components/Container";
 
 function IndexPage(props) {
@@ -47,30 +48,34 @@ function IndexPage(props) {
         </Container>
       </Box>
       <Capital />
-      <Container>
-        <div>
-          <p>Demande a su cliente cuando aún está comercialmente activo.</p>
-        </div>
-      </Container>
+      <Box py={[1, 2, 3, 3]}>
+        <Container>
+          <Alert />
+        </Container>
+      </Box>
       <section>
-        <div>
-          <h3>Sin comisión</h3>
-          <p>
-            En ninguno de nuestros servicios de recuperación de cartera para
-            empresas cobramos comisión.
-          </p>
-          <p>
-            A excepción de Rentul Inmobiliario <a href="#">Saber más</a>
-          </p>
-        </div>
-        <div>
-          <h3>No tocamos su dinero</h3>
-          <p>
-            En todos los comunicados le decimos a su cliente que el pago debe
-            hacerlo como acordaron en el momento de la negociación, o como lo ha
-            hecho siempre.
-          </p>
-        </div>
+        <Container>
+          <Flex>
+            <Box w={[1 / 2]} px={2}>
+              <h3>Sin comisión</h3>
+              <p>
+                En ninguno de nuestros servicios de recuperación de cartera para
+                empresas cobramos comisión.
+              </p>
+              <p>
+                A excepción de Rentul Inmobiliario <a href="#">Saber más</a>
+              </p>
+            </Box>
+            <Box w={[1 / 2]} px={2}>
+              <h3>No tocamos su dinero</h3>
+              <p>
+                En todos los comunicados le decimos a su cliente que el pago
+                debe hacerlo como acordaron en el momento de la negociación, o
+                como lo ha hecho siempre.
+              </p>
+            </Box>
+          </Flex>
+        </Container>
       </section>
 
       <section>

@@ -14,10 +14,13 @@
     "gatsby-link": "^1.6.35",
     "gatsby-plugin-emotion": "^1.1.11",
     "gatsby-plugin-react-helmet": "^2.0.3",
+    "gatsby-plugin-react-next": "^1.0.8",
     "gatsby-plugin-typography": "^1.7.12",
     "gatsby-source-filesystem": "^1.5.15",
     "gatsby-transformer-remark": "^1.7.30",
     "grid-emotion": "^2.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-emotion": "^8.0.12",
     "react-helmet": "^5.2.0",
     "typography": "^0.16.6"

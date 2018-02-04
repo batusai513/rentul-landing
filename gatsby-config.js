@@ -3,6 +3,7 @@ module.exports = {
     title: "Rentul Defense"
   },
   plugins: [
+    'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
