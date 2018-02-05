@@ -1,13 +1,7 @@
 import React from "react";
 import { css } from "react-emotion";
 import facepaint from "facepaint";
-import { rem } from "../../utils/typography";
-
-const mq = facepaint([
-  `@media screen and (min-width: ${rem(600)})`,
-  `@media screen and (min-width: ${rem(780)})`,
-  `@media screen and (min-width: ${rem(1024)})`
-]);
+import { rem, mq } from "../../utils/typography";
 
 const alertFontSize = css(
   mq({

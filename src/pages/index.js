@@ -1,10 +1,15 @@
 import React from "react";
 import Link from "gatsby-link";
 import { Box, Flex } from "grid-emotion";
-import Feature from "../components/Feature";
+import { css } from "react-emotion";
+import Features from "../components/Feature/Features";
+import Service from "../components/Service";
 import Hero from "../components/Hero";
 import Capital from "../components/Capital";
 import Alert from "../components/Alert";
+import Polygon from "../components/Polygon";
+import Debts from '../components/Debts';
+import Banner from '../components/BottomBanner';
 import Container from "../components/Container";
 
 function IndexPage(props) {
@@ -15,7 +20,7 @@ function IndexPage(props) {
         <Container>
           <Flex wrap>
             <Box width={[1, 1 / 2, 1 / 3]} px={2}>
-              <Feature
+              <Service
                 color="#FF5830"
                 title="Procesos jurídicos"
                 body={
@@ -26,14 +31,14 @@ function IndexPage(props) {
               />
             </Box>
             <Box width={[1, 1 / 2, 1 / 3]} px={2}>
-              <Feature
+              <Service
                 color="#17A0EE"
                 title="Cobranza Prejurídica y administrativa"
                 body="Mantenga su cartera al día"
               />
             </Box>
             <Box width={[1, 1, 1 / 3]} px={2}>
-              <Feature
+              <Service
                 color="#FFA330"
                 title="Rentul Inmobiliario"
                 body={
@@ -53,51 +58,16 @@ function IndexPage(props) {
           <Alert />
         </Container>
       </Box>
-      <section>
-        <Container>
-          <Flex>
-            <Box w={[1 / 2]} px={2}>
-              <h3>Sin comisión</h3>
-              <p>
-                En ninguno de nuestros servicios de recuperación de cartera para
-                empresas cobramos comisión.
-              </p>
-              <p>
-                A excepción de Rentul Inmobiliario <a href="#">Saber más</a>
-              </p>
-            </Box>
-            <Box w={[1 / 2]} px={2}>
-              <h3>No tocamos su dinero</h3>
-              <p>
-                En todos los comunicados le decimos a su cliente que el pago
-                debe hacerlo como acordaron en el momento de la negociación, o
-                como lo ha hecho siempre.
-              </p>
-            </Box>
-          </Flex>
+      <Features />
+
+      <Box is="section" py={[1, 2, 3, 4]}>
+        <Container width={986}>
+          <h2 css={`text-align: center;`}>¿Por qué los clientes no le pagan a su proveedor?</h2>
+          <Debts />
         </Container>
-      </section>
+      </Box>
 
-      <section>
-        <h2>¿Por qué los clientes no le pagan a su proveedor?</h2>
-        <p>70%</p>
-        <p>
-          No es una prioridad: otras empresas le proveen lo mismo, o ya no
-          necesita su producto.{" "}
-        </p>
-        <p>15%</p>
-        <p>Piensa que puede esperar</p>
-        <p>10%</p>
-        <p>Cree que no tiene forma, conocimiento ni dinero para demandarlo</p>
-        <p>5%</p>
-        <p>Realmente no tiene con qué</p>
-      </section>
-
-      <section>
-        <h3>Recupere su dinero</h3>
-        <p>Mantenga su cartera al día</p>
-        <Link to="/">Únete ahora</Link>
-      </section>
+      <Banner />
     </div>
   );
 }

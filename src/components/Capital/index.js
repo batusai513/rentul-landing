@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "react-emotion";
 import Color from "color";
 import facepaint from "facepaint";
-import { rem } from "../../utils/typography";
+import { rem, mq } from "../../utils/typography";
 
 export default function Capital(props) {
   return (
@@ -41,12 +41,6 @@ export default function Capital(props) {
     </div>
   );
 }
-
-const mq = facepaint([
-  `@media screen and (min-width: ${rem(600)})`,
-  `@media screen and (min-width: ${rem(780)})`,
-  `@media screen and (min-width: ${rem(1024)})`
-]);
 
 const alpha = mq({ fontSize: [rem(22), rem(30), rem(38)] });
 
