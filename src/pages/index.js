@@ -9,7 +9,8 @@ import Capital from "../components/Capital";
 import Alert from "../components/Alert";
 import Polygon from "../components/Polygon";
 import Debts from '../components/Debts';
-import Banner from '../components/BottomBanner';
+import Banner from '../components/BottomBanner'
+import Footer from '../components/Footer';
 import Container from "../components/Container";
 
 function IndexPage(props) {
@@ -68,6 +69,7 @@ function IndexPage(props) {
       </Box>
 
       <Banner />
+      <Footer />
     </div>
   );
 }

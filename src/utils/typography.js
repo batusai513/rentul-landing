@@ -3,7 +3,7 @@ import facepaint from 'facepaint';
 
 const typography = new Typography({
   baseFontSize: "15px",
-  baseLineHeight: 1.2,
+  baseLineHeight: 1.4,
   headerWeight: "700",
   googleFonts: [
     {
