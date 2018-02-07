@@ -1,6 +1,4 @@
 import React from "react";
-import { renderToString } from "react-dom/server";
-import { extractCritical } from "emotion-server";
 import { ThemeProvider } from "emotion-theming";
 import { BrowserRouter } from "react-router-dom";
 import { hydrate } from "emotion";

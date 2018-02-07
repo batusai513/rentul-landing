@@ -10,12 +10,11 @@ import Alert from "../components/Alert";
 import Polygon from "../components/Polygon";
 import Debts from '../components/Debts';
 import Banner from '../components/BottomBanner'
-import Footer from '../components/Footer';
 import Container from "../components/Container";
 
 function IndexPage(props) {
   return (
-    <div>
+    <React.Fragment>
       <Hero />
       <Box is="section" py={[1, 2, 3, 4]}>
         <Container>
@@ -69,8 +68,7 @@ function IndexPage(props) {
       </Box>
 
       <Banner />
-      <Footer />
-    </div>
+    </React.Fragment>
   );
 }
 

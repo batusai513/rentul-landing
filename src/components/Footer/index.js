@@ -1,18 +1,15 @@
 import React from "react";
-import styled from 'react-emotion';
+import styled from "react-emotion";
 import { Flex, Box } from "grid-emotion";
+import { Row, Column } from "../Grid";
+import ContactForm from "./ContactForm";
 import Container from "../Container";
 
 const titleStyles = `
   font-size: 14px;
   font-family: 'Open Sans';
+  margin-bottom: 2rem;
 `;
-
-const Input = styled('input')`
-  width: 100%;
-`;
-
-const Textarea = Input.withComponent('textarea');
 
 export default function Footer() {
   return (
@@ -26,8 +23,8 @@ export default function Footer() {
       `}
     >
       <Container width={1024}>
-        <Flex wrap>
-          <Box w={[1, 1 / 3]}>
+        <Row spacing={2} wrap>
+          <Column spacing={2} w={[1, 3 / 10]}>
             <h2 css={titleStyles}>Encuéntranos</h2>
             <p>CR 26 No 63 - 68, Bogotá - Colombia</p>
             <p>
@@ -35,45 +32,46 @@ export default function Footer() {
               Cali: +57 2 620 76 18
             </p>
             <p>
-              <a href="mailto:colombia@rentul-defense.com">
+              <a
+                css={`
+                  color: white;
+                `}
+                href="mailto:colombia@rentul-defense.com"
+              >
                 colombia@rentul-defense.com
               </a>
             </p>
-          </Box>
-          <Box w={[1, 1 / 3]}>
+          </Column>
+          <Column spacing={2} w={[1, 4 / 10]}>
             <h2 css={titleStyles}>Contáctanos</h2>
-            <Flex wrap>
-              <Box w={1}>
-                <Input type="text" />
-              </Box>
-              <Box w={[1, 1 / 2]}>
-                <Input type="text" />
-              </Box>
-              <Box w={[1, 1 / 2]}>
-                <Input type="text" />
-              </Box>
-              <Box w={[1, 1 / 2]}>
-                <Input type="text" />
-              </Box>
-              <Box w={[1, 1 / 2]}>
-                <Input type="text" />
-              </Box>
-              <Box w={1}>
-                <Textarea name="" rows="10" />
-              </Box>
-            </Flex>
-          </Box>
-          <Box w={[1, 1 / 3]}>
+            <ContactForm />
+          </Column>
+          <Column spacing={2} w={[1, 3 / 10]}>
             <h2 css={titleStyles}>Social</h2>
-          </Box>
-        </Flex>
+          </Column>
+        </Row>
         <hr
           css={`
-            margin-top: 1rem;
-            margin-bottom: 1rem;
+            background-color: #717171;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
           `}
         />
+        <p
+          css={`
+            color: #9b9b9b;
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 0;
+          `}
+        >
+          © {getYear(new Date())} Rentul. All Rights Reserved{" "}
+        </p>
       </Container>
     </Box>
   );
+}
+
+function getYear(date) {
+  return date.getFullYear();
 }
