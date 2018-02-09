@@ -11,10 +11,12 @@ import Polygon from "../components/Polygon";
 import Debts from '../components/Debts';
 import Banner from '../components/BottomBanner'
 import Container from "../components/Container";
+import Header from "../components/Header";
 
 function IndexPage(props) {
   return (
     <React.Fragment>
+      <Header positioned />
       <Hero />
       <Box is="section" py={[1, 2, 3, 4]}>
         <Container>

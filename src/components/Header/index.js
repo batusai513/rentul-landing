@@ -5,18 +5,17 @@ import { Flex, Box } from "grid-emotion";
 import Container from "../Container";
 import Navigation from './Navigation';
 
-const Header = () => (
+const Header = (props) => (
   <header
     css={css`
-      background: transparent;
-      margin-bottom: 1.45rem;
-      position: absolute;
+      background: ${props.background || 'transparent'};
+      position: ${props.positioned ? 'absolute' : 'static'};
       width: 100%;
     `}
   >
     <Container>
       <Flex align="center" direction={['column', 'row']}>
-        <Box width={[ 1, 1/4, 1/3 ]}>
+        <Box width={[1, 1 / 4, 1 / 3]}>
           <h1 style={{ margin: 0 }}>
             <Link
               to="/"
@@ -29,7 +28,7 @@ const Header = () => (
             </Link>
           </h1>
         </Box>
-        <Box width={[ 1, 3/4, 2/3 ]}>
+        <Box width={[1, 3 / 4, 2 / 3]}>
           <Navigation />
         </Box>
       </Flex>
