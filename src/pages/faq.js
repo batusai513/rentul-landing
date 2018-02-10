@@ -1,5 +1,12 @@
 import React from "react";
+import Header from "../components/Header";
+import PageTitle from '../components/PageTitle';
 
 export default function Faq() {
-  return <h1>Hola</h1>;
+  return (
+    <React.Fragment>
+      <Header background={'#006FAE'} />
+      <PageTitle title="Preguntas Frecuentes" />
+    </React.Fragment>
+  );
 }
