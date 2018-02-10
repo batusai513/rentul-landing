@@ -9,26 +9,29 @@ export default function PriceList() {
       <h3
         className={css`
           text-align: center;
+          margin-bottom: 2rem;
+          font-weight: 400;
         `}
       >
         Escoja su plan de acuerdo a su necesidad.
       </h3>
-      <Flex justify="center">
+      <Flex wrap justify="center">
         <PriceItem
           title="Plan Básico"
-          price={210000}
+          price={'210.000'}
           clients={30}
           processes={0}
         />
         <PriceItem
           title="Plan Premium"
-          price={470000}
+          price={'470.000'}
           clients={30}
           processes={3}
+          focus
         />
         <PriceItem
           title="Plan Gold"
-          price={730000}
+          price={'730.000'}
           clients={100}
           processes={3}
         />

@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Container from '../components/Container';
 import PageTitle from '../components/PageTitle';
 import PriceList from '../components/PriceList';
+import ReferenceBanner from '../components/BottomBanner/ReferenceBanner';
 
 export default function Faq() {
   return (
@@ -12,6 +13,7 @@ export default function Faq() {
       <Container>
         <PriceList />
       </Container>
+      <ReferenceBanner />
     </React.Fragment>
   );
 }
