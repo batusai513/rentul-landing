@@ -1,0 +1,7 @@
+---
+faqs:
+- 'hola
+---
+
+
+hola mundo
