@@ -4,22 +4,35 @@ import { css } from "react-emotion";
 import { Flex, Box } from "grid-emotion";
 import Container from "../Container";
 import Navigation from "./Navigation";
-import { rem } from '../../utils/typography';
+import { rem } from "../../utils/typography";
 
 const Header = props => (
   <header
     css={css`
-      background: ${props.background || "transparent"};
-      position: ${props.positioned ? "absolute" : "static"};
+      background: ${props.background ? props.background : "transparent"};
       width: 100%;
-      padding-top: ${rem(10)};
-      padding-bottom: ${rem(10)};
+      @media screen and (min-width: 640px) {
+        position: ${props.positioned ? "absolute" : "static"};
+        background: ${props.positioned && "transparent"};
+      }
     `}
   >
     <Container>
-      <Flex align="center" direction={["column", "row"]}>
+      <Flex direction={["column", "row"]}>
         <Box width={[1, 1 / 4, 1 / 3]}>
-          <h1 style={{ margin: 0 }}>
+          <h1
+            css={`
+              margin: 0;
+              padding-top: ${rem(10)};
+              padding-bottom: ${rem(10)};
+              text-align: center;
+              @media screen and (min-width: 640px) {
+                text-align: left;
+                padding-top: ${rem(20)};
+                padding-bottom: ${rem(5)};
+              }
+            `}
+          >
             <Link
               to="/"
               style={{

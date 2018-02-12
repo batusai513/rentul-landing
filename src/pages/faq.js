@@ -4,7 +4,6 @@ import PageTitle from '../components/PageTitle';
 import FaqList from "../components/FaqList";
 
 export default function Faq(props) {
-  console.warn(props);
   return (
     <React.Fragment>
       <Header background={'#006FAE'} />

@@ -16,7 +16,7 @@ import Header from "../components/Header";
 function IndexPage(props) {
   return (
     <React.Fragment>
-      <Header positioned />
+      <Header positioned background={'#006FAE'} />
       <Hero />
       <Box is="section" py={[1, 2, 3, 4]}>
         <Container>
