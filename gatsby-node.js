@@ -10,8 +10,8 @@ exports.modifyBabelrc = ({ babelrc }) => {
     };
   }
   return {
-    plugins: [require.resolve("babel-plugin-emotion"), { hoist: true }].concat(
-      babelrc.plugins
-    )
+    plugins: [
+      [require.resolve("babel-plugin-emotion"), { hoist: true }]
+    ].concat(babelrc.plugins)
   };
 };
