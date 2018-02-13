@@ -4,7 +4,7 @@ import { extractCritical } from "emotion-server";
 import { ThemeProvider } from "emotion-theming";
 
 const theme = {
-  primaryColor: "#17A0EE"
+  primaryColor: "#FFA330"
 };
 
 exports.replaceRenderer = ({

@@ -1,14 +1,14 @@
 import React from "react";
 import styled, { css } from "react-emotion";
 import Color from "color";
-import { rem } from '../../utils/typography';
+import { rem } from "../../utils/typography";
 
-export const Button = styled("button")(base, style, rounded, square);
+export const Button = styled("button")(base, style, rounded, square, bordered);
 
-function style({ styles, theme }) {
+function style({ styles, theme, isBordered }) {
   switch (styles) {
     case "primary":
-      return buttonStyle("white", theme.primaryColor, "", "1px");
+      return buttonStyle("white", theme.primaryColor, "", "1px", isBordered);
     default:
       return "";
   }
@@ -34,10 +34,19 @@ function square({ isSquared }) {
     : "";
 }
 
+function bordered({ isBordered }) {
+  return isBordered
+    ? `
+    background-Color: transparent;
+    border-width: 2px;
+  `
+    : "";
+}
+
 function base(props) {
   return css`
   text-transform: uppercase;
-  padding: 1rem 0.8rem;
+  padding: 1rem 1.5rem;
   font-size: 1rem;
   line-height: 1;
   border-radius: 3px;
@@ -83,17 +92,18 @@ function base(props) {
 function buttonStyle(
   $color,
   $background,
-  $border = "transparent",
-  $borderWidth
+  $border,
+  $borderWidth,
+  isBordered
 ) {
   const hover = Color($background)
     .darken(0.1)
     .hsl()
     .string();
   return css`
-    color: ${$color};
+    color: ${isBordered ? $background : $color};
     border-width: ${$borderWidth};
-    border-color: ${$border};
+    border-color: ${isBordered ? $background : $border};
     background-color: ${$background};
     &:hover,
     &:focus,

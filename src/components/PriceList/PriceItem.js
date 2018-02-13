@@ -34,7 +34,7 @@ export default function PriceItem({ title, price, clients, processes, focus }) {
       </div>
       <hr css={`${separatorStyles}; margin-bottom: 0;`} />
       <div css={footerStyles}>
-        <Button isRounded >Iniciar</Button>
+        <Button isRounded isBordered styles="primary" >Iniciar</Button>
       </div>
     </article>
   );

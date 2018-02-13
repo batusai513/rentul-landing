@@ -2,6 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import { Box } from "grid-emotion";
 import Container from "../Container";
+import { Button } from '../Buttons';
 
 export default function Banner() {
   return (
@@ -20,7 +21,7 @@ export default function Banner() {
       <Container>
         <h3>Recupere su dinero</h3>
         <p>Mantenga su cartera al día</p>
-        <Link to="/">Únete ahora</Link>
+        <Button isRounded styles="primary" to="/">Únete ahora</Button>
       </Container>
     </Box>
   );

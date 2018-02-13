@@ -25,7 +25,7 @@ export default function ContactForm() {
         <Textarea dark name="" rows="5" placeholder="Mensaje" />
       </Column>
       <Column w={1} spacing={1} mb={2}>
-        <Button isRounded type="submit">Enviar</Button>
+        <Button css='color: #858A91; border-color: #858A91;' isRounded isBordered type="submit">Enviar</Button>
       </Column>
     </Row>
   );

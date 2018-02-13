@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { hydrate } from "emotion";
 
 const theme = {
-  primaryColor: "#17A0EE"
+  primaryColor: "#FFA330"
 };
 
 exports.replaceRouterComponent = () => {
