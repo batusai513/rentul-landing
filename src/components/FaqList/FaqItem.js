@@ -7,7 +7,9 @@ export default function FaqItem({ title, children }) {
     <Box
       py={2}
       css={`
-        border-bottom: 1px solid #eaecf3;
+        & + & {
+          border-top: 1px solid #eaecf3;
+        }
       `}
     >
       <Container width={1080}>

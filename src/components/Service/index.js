@@ -27,6 +27,7 @@ const serviceBase = css`
 const serviceBody = css`
   ${serviceBase} border-bottom-color: #E3E6F0;
   padding-top: 30px;
+  padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
   min-height: 166px;
