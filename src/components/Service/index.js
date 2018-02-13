@@ -5,6 +5,8 @@ import Color from "color";
 import { Button } from "../Buttons";
 import Icon from "../Icon";
 import Polygon from "../Polygon";
+import Modal from "../Modal";
+import BaseService from "./BaseServiceContent";
 import { rem } from "../../utils/typography";
 
 const titleCss = css`
@@ -26,7 +28,7 @@ const serviceBase = css`
 
 const serviceBody = css`
   ${serviceBase};
-  border-bottom-color: #E3E6F0;
+  border-bottom-color: #e3e6f0;
   padding-top: 30px;
   padding-bottom: 15px;
   padding-left: 10px;
@@ -57,7 +59,7 @@ const ServiceContainer = styled(Box)`
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
 `;
 
-export default function Service({ title, body, color }) {
+export default function Service({ title, body, color, iconName }) {
   const bg = Color(color)
     .alpha(0.8)
     .hsl()
@@ -69,7 +71,12 @@ export default function Service({ title, body, color }) {
           ${serviceHead} background-color: ${bg};
         `}
       >
-        <Polygon css={servicePoligon} opacity="0.07" stroke="#FFFFFF" />
+        <Polygon
+          css={servicePoligon}
+          iconName={iconName}
+          opacity="0.07"
+          stroke="#FFFFFF"
+        />
       </div>
       <div
         css={`
@@ -84,9 +91,20 @@ export default function Service({ title, body, color }) {
           ${serviceFooter};
         `}
       >
-        <Button isRounded isSquared css={serviceButton(color)}>
-          +
-        </Button>
+        <Modal
+          action={(isOpen, openHandler) => (
+            <Button
+              isRounded
+              isSquared
+              css={serviceButton(color)}
+              onClick={openHandler}
+            >
+              +
+            </Button>
+          )}
+        >
+          <BaseService color={bg} />
+        </Modal>
       </div>
     </ServiceContainer>
   );

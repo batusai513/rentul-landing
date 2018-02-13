@@ -25,6 +25,7 @@ function IndexPage(props) {
               <Service
                 color="#FF5830"
                 title="Procesos jurídicos"
+                iconName="hammer"
                 body={
                   <span>
                     No espere a que su cliente <br /> se quede sin dinero
@@ -36,6 +37,7 @@ function IndexPage(props) {
               <Service
                 color="#17A0EE"
                 title="Cobranza Prejurídica y administrativa"
+                iconName="doc"
                 body="Mantenga su cartera al día"
               />
             </Box>
@@ -43,6 +45,7 @@ function IndexPage(props) {
               <Service
                 color="#FFA330"
                 title="Rentul Inmobiliario"
+                iconName="house"
                 body={
                   <span>
                     Arrendamientos Derecho <br /> inmobiliario en general <br />{" "}

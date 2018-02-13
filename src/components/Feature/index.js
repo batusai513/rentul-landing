@@ -5,14 +5,22 @@ import Color from "color";
 import { Button } from "../Buttons";
 import Polygon from "../Polygon";
 
-export default function Feture({ title, body, extra }) {
+export default function Feture({ title, body, extra, iconName = "" }) {
   return (
-    <article css={`
-      max-width: 380px;
-      text-align: center;
-      margin: auto;
-    `}>
-      <Polygon css={`font-size: 200px; margin-bottom: 1rem;`} />
+    <article
+      css={`
+        max-width: 380px;
+        text-align: center;
+        margin: auto;
+      `}
+    >
+      <Polygon
+        iconName={iconName}
+        iconColor="#006FAE"
+        css={`
+          font-size: 200px;
+        `}
+      />
       <h3>{title}</h3>
       <p>{body}</p>
       {extra}

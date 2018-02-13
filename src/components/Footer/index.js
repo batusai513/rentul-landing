@@ -4,6 +4,7 @@ import { Flex, Box } from "grid-emotion";
 import { Row, Column } from "../Grid";
 import ContactForm from "./ContactForm";
 import Container from "../Container";
+import Icon from '../Icon';
 
 const titleStyles = `
   font-size: 14px;
@@ -48,6 +49,12 @@ export default function Footer() {
           </Column>
           <Column spacing={2} w={[1, 3 / 10]}>
             <h2 css={titleStyles}>Social</h2>
+            <a css={`color: inherit; font-size: 32px; padding: 0 5px`} href="#">
+              <Icon name="facebook" />
+            </a>
+            <a css={`color: inherit; font-size: 32px; padding: 0 5px`} href="#">
+            <Icon name="twitter" />
+            </a>
           </Column>
         </Row>
         <hr

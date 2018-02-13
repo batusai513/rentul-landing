@@ -3,7 +3,15 @@ import styled, { css } from "react-emotion";
 import Color from "color";
 import { rem } from "../../utils/typography";
 
-export const Button = styled("button")(base, style, rounded, square, bordered, block);
+export const Button = styled("button")(
+  base,
+  style,
+  rounded,
+  square,
+  bordered,
+  block
+);
+export const AnchorButton = Button.withComponent("a");
 
 function style({ styles, theme, isBordered }) {
   switch (styles) {
@@ -55,6 +63,7 @@ function block({ block }) {
 
 function base(props) {
   return css`
+  text-decoration: none;
   text-transform: uppercase;
   padding: 1rem 1.5rem;
   font-size: 1rem;

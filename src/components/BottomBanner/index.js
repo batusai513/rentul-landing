@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import { Box } from "grid-emotion";
 import Container from "../Container";
-import { Button } from "../Buttons";
+import { AnchorButton } from "../Buttons";
 import { rem, mq } from "../../utils/typography";
 
 const titleSizes = mq({ fontSize: [rem(24), rem(32), rem(36)] });
@@ -40,9 +40,13 @@ export default function Banner() {
         >
           Mantenga su cartera al día
         </p>
-        <Button isRounded styles="primary" to="/">
+        <AnchorButton
+          isRounded
+          styles="primary"
+          href="https://www.rentul-defense.com/users/sign_in"
+        >
           Únete ahora
-        </Button>
+        </AnchorButton>
       </Container>
     </Box>
   );

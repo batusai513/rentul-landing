@@ -49,6 +49,7 @@ export default function Features() {
             <Feature
               title="No tocamos su dinero"
               body="En todos los comunicados le decimos a su cliente que el pago debe hacerlo como acordaron en el momento de la negociación, o como lo ha hecho siempre."
+              iconName="caja"
             />
           </Box>
         </Flex>
