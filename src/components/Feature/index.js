@@ -10,6 +10,7 @@ export default function Feture({ title, body, extra }) {
     <article css={`
       max-width: 380px;
       text-align: center;
+      margin: auto;
     `}>
       <Polygon css={`font-size: 200px; margin-bottom: 1rem;`} />
       <h3>{title}</h3>

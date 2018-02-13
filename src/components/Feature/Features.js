@@ -13,8 +13,8 @@ export default function Features() {
       `}
     >
       <Container>
-        <Flex wrap>
-          <Box
+        <Flex wrap justify="center">
+          {/*<Box
             css={`
               display: flex;
               justify-content: center;
@@ -34,7 +34,7 @@ export default function Features() {
                 </p>
               }
             />
-          </Box>
+            </Box>*/}
           <Box
             css={`
               display: flex;
@@ -43,7 +43,7 @@ export default function Features() {
                 justify-content: flex-start;
               }
             `}
-            w={[1, 1 / 2]}
+            w={[1]}
             px={2}
           >
             <Feature
