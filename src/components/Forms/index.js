@@ -7,6 +7,12 @@ export const darkStyles = `
   color: #858A91;
 `;
 
+export const lightStyles = `
+  background-color: #F3F4F9;
+  border-color: #F3F4F9;;
+  color: #4A4A4A;
+`;
+
 const base = props => `
   display: block;
   width: 100%;
@@ -22,8 +28,8 @@ const base = props => `
   background-image: none;
   border-width: 1px;
   border-style: solid;
-  border-color: $input-border;
-  border-radius: 3px;
+  border-color: inherit;
+  border-radius: 4px;
   &[disabled],
   &[readonly],
   fieldset[disabled] & {
@@ -32,6 +38,7 @@ const base = props => `
     opacity: 1;
   };
   ${props.dark == true ? darkStyles : ""}
+  ${props.light == true ? lightStyles : ""}
 `;
 
 export const Input = styled("input")`

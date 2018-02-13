@@ -1,34 +1,66 @@
 import React from "react";
 import Link from "gatsby-link";
 import styled, { css } from "react-emotion";
+import LoginPopup from "./LoginPopup";
+import Popover from "../Popover";
 
 const activeStyle = css`
-  border-top-color: #FFA330 !important;
+  border-top-color: #ffa330 !important;
 `;
 
-const NavItem = styled(Link)`
+const navItem = `
   display: inline-block;
+`;
+
+const NavLink = styled(Link)`
+  display: block;
   padding: 1.5rem 1rem;
   color: white;
   text-decoration: none;
   border-top: 3px solid transparent;
 `;
 
+const NavAnchor = NavLink.withComponent("a");
+
 export default function Navigation() {
   return (
     <nav css={navStyles}>
-      <NavItem exact activeClassName={activeStyle} to="/">
-        Inicio
-      </NavItem>
-      <NavItem exact activeClassName={activeStyle} to="/planes">
+      <div css={navItem}>
+        <NavLink exact activeClassName={activeStyle} to="/">
+          Inicio
+        </NavLink>
+      </div>
+      <div css={navItem}>
+        {/*<NavLink exact activeClassName={activeStyle} to="/planes">
         planes
-      </NavItem>
-      <NavItem exact activeClassName={activeStyle} to="/faq">
-        Preguntas frecuentes
-      </NavItem>
-      <NavItem exact activeClassName={activeStyle} to="/">
-        Ingreso de usuario
-      </NavItem>
+  </NavLink>*/}
+      </div>
+      <div css={navItem}>
+        <NavLink exact activeClassName={activeStyle} to="/faq">
+          Preguntas frecuentes
+        </NavLink>
+      </div>
+      <div css={navItem}>
+        {/*<Popover
+          action={isOpen => (
+            <NavAnchor
+              css={`
+                ${isOpen ? activeStyle : ""};
+              `}
+              href="https://www.rentul-defense.com/users/sign_in"
+            >
+              Ingreso de usuario
+            </NavAnchor>
+          )}
+        >
+          <LoginPopup />
+        </Popover>*/}
+        <NavAnchor
+          href="https://www.rentul-defense.com/users/sign_in"
+        >
+          Ingreso de usuario
+        </NavAnchor>
+      </div>
     </nav>
   );
 }

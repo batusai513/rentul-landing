@@ -3,7 +3,7 @@ import styled, { css } from "react-emotion";
 import Color from "color";
 import { rem } from "../../utils/typography";
 
-export const Button = styled("button")(base, style, rounded, square, bordered);
+export const Button = styled("button")(base, style, rounded, square, bordered, block);
 
 function style({ styles, theme, isBordered }) {
   switch (styles) {
@@ -39,6 +39,16 @@ function bordered({ isBordered }) {
     ? `
     background-Color: transparent;
     border-width: 2px;
+  `
+    : "";
+}
+
+function block({ block }) {
+  return block
+    ? `
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   `
     : "";
 }
@@ -89,13 +99,7 @@ function base(props) {
 `;
 }
 
-function buttonStyle(
-  $color,
-  $background,
-  $border,
-  $borderWidth,
-  isBordered
-) {
+function buttonStyle($color, $background, $border, $borderWidth, isBordered) {
   const hover = Color($background)
     .darken(0.1)
     .hsl()
