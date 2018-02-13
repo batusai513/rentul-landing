@@ -18,7 +18,7 @@ const Header = props => (
     `}
   >
     <Container>
-      <Flex direction={["column", "row"]}>
+      <Flex flexDirection={["column", "row"]}>
         <Box width={[1, 1 / 4, 1 / 3]}>
           <h1
             css={`

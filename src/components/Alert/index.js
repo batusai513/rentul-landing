@@ -1,6 +1,5 @@
 import React from "react";
 import { css } from "react-emotion";
-import facepaint from "facepaint";
 import { rem, mq } from "../../utils/typography";
 
 const alertFontSize = css(

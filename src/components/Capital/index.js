@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { css } from "react-emotion";
 import Color from "color";
-import facepaint from "facepaint";
 import { rem, mq } from "../../utils/typography";
 
 export default function Capital(props) {

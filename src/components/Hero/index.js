@@ -2,18 +2,19 @@ import React from "react";
 import styled, { css } from "react-emotion";
 import { Box } from "grid-emotion";
 import bg from "../../assets/images/main-banner.jpg";
-import { rem } from '../../utils/typography';
+import { rem, mq } from "../../utils/typography";
+
+const textSizes = mq({ fontSize: [rem(22), rem(28), rem(34)] });
+const containerHeights = mq({ height: [rem(280), rem(360), rem(460)] });
 
 const Container = styled(Box)`
   background-image: url(${bg});
-  height: 460px;
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
 const text = css`
-  font-size: ${rem(34)};
   color: white;
   text-align: center;
   font-weight: 700;
@@ -22,7 +23,7 @@ const text = css`
     content: "";
     width: ${80 / 34}em;
     height: 6px;
-    background-color: #FFA330;
+    background-color: #ffa330;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
@@ -35,8 +36,12 @@ const text = css`
 
 export default function Hero() {
   return (
-    <Container>
-      <p css={text}>
+    <Container css={containerHeights}>
+      <p
+        css={`
+          ${text} ${textSizes};
+        `}
+      >
         Especialistas <span>en cobranza</span>
       </p>
     </Container>
