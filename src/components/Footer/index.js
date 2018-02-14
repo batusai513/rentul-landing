@@ -4,12 +4,22 @@ import { Flex, Box } from "grid-emotion";
 import { Row, Column } from "../Grid";
 import ContactForm from "./ContactForm";
 import Container from "../Container";
-import Icon from '../Icon';
+import Icon from "../Icon";
+import Media from "../Media";
 
 const titleStyles = `
   font-size: 14px;
   font-family: 'Open Sans';
   margin-bottom: 2rem;
+`;
+
+const findItem = `
+  font-size: 14px;
+`;
+
+const findIcon = `
+  color: #ffa330;
+  font-size: 18px;
 `;
 
 export default function Footer() {
@@ -27,20 +37,28 @@ export default function Footer() {
         <Row spacing={2} wrap>
           <Column spacing={2} w={[1, 3 / 10]}>
             <h2 css={titleStyles}>Encuéntranos</h2>
-            <p>CR 26 No 63 - 68, Bogotá - Colombia</p>
-            <p>
-              Bogota: +57 1 508 56 96 <br />
-              Cali: +57 2 620 76 18
+            <p css={findItem}>
+              <Media figure={<Icon css={findIcon} name="geo" />}>
+                CR 26 No 63 - 68, Bogotá - Colombia
+              </Media>
             </p>
-            <p>
-              <a
-                css={`
-                  color: white;
-                `}
-                href="mailto:colombia@rentul-defense.com"
-              >
-                colombia@rentul-defense.com
-              </a>
+            <p css={findItem}>
+              <Media figure={<Icon css={findIcon} name="tel" />}>
+                Bogota: +57 1 508 56 96 <br />
+                Cali: +57 2 620 76 18
+              </Media>
+            </p>
+            <p css={findItem}>
+              <Media figure={<Icon css={findIcon} name="mail" />}>
+                <a
+                  css={`
+                    color: white;
+                  `}
+                  href="mailto:colombia@rentul-defense.com"
+                >
+                  colombia@rentul-defense.com
+                </a>
+              </Media>
             </p>
           </Column>
           <Column spacing={2} w={[1, 4 / 10]}>
@@ -49,11 +67,25 @@ export default function Footer() {
           </Column>
           <Column spacing={2} w={[1, 3 / 10]}>
             <h2 css={titleStyles}>Social</h2>
-            <a css={`color: inherit; font-size: 32px; padding: 0 5px`} href="#">
+            <a
+              css={`
+                color: inherit;
+                font-size: 32px;
+                padding: 0 5px;
+              `}
+              href="#"
+            >
               <Icon name="facebook" />
             </a>
-            <a css={`color: inherit; font-size: 32px; padding: 0 5px`} href="#">
-            <Icon name="twitter" />
+            <a
+              css={`
+                color: inherit;
+                font-size: 32px;
+                padding: 0 5px;
+              `}
+              href="#"
+            >
+              <Icon name="twitter" />
             </a>
           </Column>
         </Row>
