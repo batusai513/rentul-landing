@@ -65,3 +65,32 @@
 .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
   stroke: transparent;
 }
+
+
+.ReactModal__Overlay {
+  perspective: 600;
+  opacity: 0;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transition: opacity 250ms ease-out;
+}
+
+.ReactModal__Content {
+  transform: scale(0.5);
+}
+
+.ReactModal__Content--after-open {
+  transform: scale(1);
+  transition: all 250ms ease-in;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Content--before-close {
+  transform: scale(0.5);
+  transition: all 250ms ease-in;
+}

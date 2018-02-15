@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import ReactModal from "react-modal";
 import P from "prop-types";
+import Icon from '../Icon';
 
 class Modal extends Component {
   state = {
@@ -35,15 +36,36 @@ class Modal extends Component {
           contentLabel={contentLabel}
           onRequestClose={this.onCloseHandler}
           style={generateStyles()}
+          closeTimeoutMS={250}
           {...(typeof window !== "undefined"
             ? { appElement: window.document.getElementById("___gatsby") }
             : {})}
         >
           {children}
+          <button onClick={this.onCloseHandler} css={buttonCloseStyles}>
+            <Icon name="close" />
+          </button>
         </ReactModal>
       </Fragment>
     );
   }
+}
+
+function buttonCloseStyles() {
+  return `
+    appearance: none;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    color: white;
+    font-size: 44px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  `;
 }
 
 function generateStyles() {
@@ -53,16 +75,14 @@ function generateStyles() {
       left: "0",
       right: "auto",
       bottom: "auto",
-      // marginRight: '-50%',
-      // transform: 'translate(-50%, -50%)',
-      // boxShadow: '0 4px 4px 0 rgba(0, 0, 0, 0.50)',
-      // maxWidth: '600px',
       width: "100%",
       height: "100%",
       padding: "0",
       borderRadius: "0",
       border: "0",
-      overflow: "visible"
+      overflowX: "hidden",
+      overflowY: 'auto',
+      position: 'fixed',
     },
     overlay: {
       zIndex: "2",

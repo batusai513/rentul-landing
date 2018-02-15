@@ -6,7 +6,7 @@ import { Button } from "../Buttons";
 import Icon from "../Icon";
 import Polygon from "../Polygon";
 import Modal from "../Modal";
-import BaseService from "./BaseServiceContent";
+import LegalProcess from "./LegalProcess";
 import { rem } from "../../utils/typography";
 
 const titleCss = css`
@@ -51,15 +51,17 @@ const serviceButton = color => css`
   transform: translateY(-50%);
 `;
 
-const servicePoligon = css`
-  font-size: 190px;
-`;
-
 const ServiceContainer = styled(Box)`
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
 `;
 
-export default function Service({ title, body, color, iconName }) {
+export default function Service({
+  title,
+  body,
+  modalContent: ModalContent,
+  color,
+  iconName
+}) {
   const bg = Color(color)
     .alpha(0.8)
     .hsl()
@@ -71,12 +73,7 @@ export default function Service({ title, body, color, iconName }) {
           ${serviceHead} background-color: ${bg};
         `}
       >
-        <Polygon
-          css={servicePoligon}
-          iconName={iconName}
-          opacity="0.07"
-          stroke="#FFFFFF"
-        />
+        <Polygon iconName={iconName} opacity="0.07" stroke="#FFFFFF" />
       </div>
       <div
         css={`
@@ -103,7 +100,7 @@ export default function Service({ title, body, color, iconName }) {
             </Button>
           )}
         >
-          <BaseService color={bg} />
+          <ModalContent color={bg} iconName={iconName} />
         </Modal>
       </div>
     </ServiceContainer>

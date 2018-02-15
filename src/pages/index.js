@@ -4,19 +4,22 @@ import { Box, Flex } from "grid-emotion";
 import { css } from "react-emotion";
 import Features from "../components/Feature/Features";
 import Service from "../components/Service";
+import LegalProcess from "../components/Service/LegalProcess";
+import Collection from "../components/Service/Collection";
+import RealEstate from "../components/Service/RealEstate";
 import Hero from "../components/Hero";
 import Capital from "../components/Capital";
 import Alert from "../components/Alert";
 import Polygon from "../components/Polygon";
-import Debts from '../components/Debts';
-import Banner from '../components/BottomBanner'
+import Debts from "../components/Debts";
+import Banner from "../components/BottomBanner";
 import Container from "../components/Container";
 import Header from "../components/Header";
 
 function IndexPage(props) {
   return (
     <React.Fragment>
-      <Header positioned background={'#006FAE'} />
+      <Header positioned background={"#006FAE"} />
       <Hero />
       <Box is="section" py={[1, 2, 3, 4]}>
         <Container>
@@ -31,6 +34,7 @@ function IndexPage(props) {
                     No espere a que su cliente <br /> se quede sin dinero
                   </span>
                 }
+                modalContent={LegalProcess}
               />
             </Box>
             <Box width={[1, 1 / 2, 1 / 3]} px={2}>
@@ -39,6 +43,7 @@ function IndexPage(props) {
                 title="Cobranza Prejurídica y administrativa"
                 iconName="doc"
                 body="Mantenga su cartera al día"
+                modalContent={Collection}
               />
             </Box>
             <Box width={[1, 1, 1 / 3]} px={2}>
@@ -52,6 +57,7 @@ function IndexPage(props) {
                     Administración de propiedad horizontal
                   </span>
                 }
+                modalContent={RealEstate}
               />
             </Box>
           </Flex>
@@ -67,7 +73,13 @@ function IndexPage(props) {
 
       <Box is="section" py={[1, 2, 3, 4]}>
         <Container width={986}>
-          <h2 css={`text-align: center;`}>¿Por qué los clientes no le pagan a su proveedor?</h2>
+          <h2
+            css={`
+              text-align: center;
+            `}
+          >
+            ¿Por qué los clientes no le pagan a su proveedor?
+          </h2>
           <Debts />
         </Container>
       </Box>

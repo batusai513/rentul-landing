@@ -17,9 +17,6 @@ export default function Feture({ title, body, extra, iconName = "" }) {
       <Polygon
         iconName={iconName}
         iconColor="#006FAE"
-        css={`
-          font-size: 200px;
-        `}
       />
       <h3>{title}</h3>
       <p>{body}</p>
