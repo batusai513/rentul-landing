@@ -46,9 +46,19 @@ const serviceButton = color => css`
   border: 1px solid #e3e6f0;
   box-shadow: 0 2px 4px 0 #e3e6f0;
   color: ${color};
-  font-size: 18px;
+  font-size: 30px;
   position: relative;
   transform: translateY(-50%);
+  transition: all 0.3s ease-out;
+  &:hover,
+  &:focus {
+    color: ${color};
+    transform: scale(1.05) translateY(-50%);
+    box-shadow: 0 2px 4px 0 #cfcfcf;
+  }
+  &:active {
+    box-shadow: inset 0 2px 2px 0 #cfcfcf;
+  }
 `;
 
 const ServiceContainer = styled(Box)`
@@ -100,7 +110,7 @@ export default function Service({
             </Button>
           )}
         >
-          <ModalContent color={bg} iconName={iconName} />
+          <ModalContent color={color} background={bg} iconName={iconName} />
         </Modal>
       </div>
     </ServiceContainer>

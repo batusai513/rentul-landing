@@ -10,7 +10,7 @@
  * All of the styles in this file are optional and configurable!
  */
 
- .CircularProgressbar {
+.CircularProgressbar {
   /*
    * This fixes an issue where the CircularProgressbar svg has
    * 0 width inside a "display: flex" container, and thus not visible.
@@ -27,7 +27,7 @@
 }
 
 .CircularProgressbar .CircularProgressbar-trail {
-  stroke: #F3F4F9;
+  stroke: #f3f4f9;
 }
 
 .CircularProgressbar .CircularProgressbar-text {
@@ -50,7 +50,8 @@
  *     percentage={50}
  *   />
  */
-.CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
+.CircularProgressbar.CircularProgressbar-inverted
+  .CircularProgressbar-background {
   fill: #3e98c7;
 }
 
@@ -66,24 +67,28 @@
   stroke: transparent;
 }
 
+html.modal--open {
+  overflow: hidden;
+}
 
 .ReactModal__Overlay {
-  perspective: 600;
   opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.ReactModal__Content {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.3);
 }
 
 .ReactModal__Overlay--after-open {
   opacity: 1;
-  transition: opacity 250ms ease-out;
-}
-
-.ReactModal__Content {
-  transform: scale(0.5);
 }
 
 .ReactModal__Content--after-open {
+  opacity: 1;
   transform: scale(1);
-  transition: all 250ms ease-in;
 }
 
 .ReactModal__Overlay--before-close {
@@ -91,6 +96,6 @@
 }
 
 .ReactModal__Content--before-close {
-  transform: scale(0.5);
-  transition: all 250ms ease-in;
+  transform: scale(1.3);
+  opacity: 0;
 }

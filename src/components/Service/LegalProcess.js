@@ -1,11 +1,12 @@
 import React from "react";
 import BaseServiceContent from "./BaseServiceContent";
 
-export default function LegalProcess({ color, iconName }) {
+export default function LegalProcess({ color, background, iconName }) {
   return (
     <BaseServiceContent
       title="Procesos jurídicos"
       color={color}
+      background={background}
       iconName={iconName}
       subtitle="Demande antes de que su cliente se quede sin dinero."
     >

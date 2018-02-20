@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
+import { Helmet } from "react-helmet";
 import ReactModal from "react-modal";
 import P from "prop-types";
-import Icon from '../Icon';
+import Icon from "../Icon";
 
 class Modal extends Component {
   state = {
@@ -41,7 +42,12 @@ class Modal extends Component {
             ? { appElement: window.document.getElementById("___gatsby") }
             : {})}
         >
-          {children}
+          <Fragment>
+            <Helmet>
+              <html className="modal--open" />
+            </Helmet>
+            {children}
+          </Fragment>
           <button onClick={this.onCloseHandler} css={buttonCloseStyles}>
             <Icon name="close" />
           </button>
@@ -81,8 +87,8 @@ function generateStyles() {
       borderRadius: "0",
       border: "0",
       overflowX: "hidden",
-      overflowY: 'auto',
-      position: 'fixed',
+      overflowY: "auto",
+      position: "fixed"
     },
     overlay: {
       zIndex: "2",

@@ -7,11 +7,17 @@ import Logo from "../Header/Logo";
 import { rem } from "../../utils/typography";
 
 const headerStyles = `
-  height: 170px;
   display: flex;
   color: white;
   align-items: center;
   justify-content: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @media screen and (min-width: 40em) {
+    height: 170px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 `;
 
 const titleStyles = `
@@ -21,26 +27,40 @@ const titleStyles = `
 
 const horizontalContainer = `
   display: flex;
-  & > div {
-    padding-left: ${rem(24)};
-    margin-left: ${rem(23)};
-    border-left: 1px solid;
+  flex-direction: column;
+  align-items: center;
+  .title-container {
+    text-align: center;
+  }
+  @media screen and (min-width: 40em) {
+    flex-direction: row;
+    .title-container {
+      text-align: left;
+      padding-left: ${rem(24)};
+      margin-left: ${rem(23)};
+      border-left: 1px solid;
+    } 
   }
 `;
 
 export default function BaseContent({
   children,
   color,
+  background,
   title,
   subtitle = "",
   iconName
 }) {
   return (
-    <div>
+    <div
+      css={`
+        background-color: #fafafd;
+      `}
+    >
       <header
         css={`
           ${headerStyles};
-          background-color: ${color};
+          background-color: ${background};
         `}
       >
         <Container
@@ -49,8 +69,10 @@ export default function BaseContent({
           `}
         >
           <div css={horizontalContainer}>
-            <Logo />
-            <div>
+            <Box flex={"0 0 0"}>
+              <Logo />
+            </Box>
+            <div className="title-container">
               <h2 css={titleStyles}>{title}</h2>
               {Subtitle(subtitle)}
             </div>
@@ -58,17 +80,24 @@ export default function BaseContent({
         </Container>
       </header>
       <Container>
-        <Box py={3}>
-          <Flex>
+        <Box py={[2, 3]}>
+          <Flex wrap>
             <Box
               css={`
                 text-align: center;
               `}
-              flex={["0 0 220px"]}
+              flex={["1 0 100%", "0 0 220px"]}
             >
               <Polygon iconName={iconName} iconColor={color} />
             </Box>
-            <Box flex={["1 0 0"]}>{children}</Box>
+            <Box
+              flex={["1 0 100%", "1 0 0"]}
+              css={`
+                max-width: 730px;
+              `}
+            >
+              {children}
+            </Box>
           </Flex>
         </Box>
       </Container>
