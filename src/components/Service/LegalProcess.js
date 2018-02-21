@@ -29,18 +29,6 @@ export default function LegalProcess({ color, background, iconName }) {
         <li>Radicación de memoriales, solicitudes y recursos.</li>
         <li>Asesoría en cobranza permanente, no solo del caso ejecutado.</li>
       </ul>
-      <h3>SIN COMISIÓN</h3>
-      <p>No cobramos comisión en ninguno de nuestros procesos.</p>
-      <p>
-        Pagando una mensualidad tiene derecho a tres demandas al años hasta por
-        ochenta millones de pesos cada una ($80.000.000)*
-      </p>
-      <p>
-        También contamos con planes de seis o nueve demandas al año. Elija el
-        plan de acuerdo a sus necesidades. Cada plan incluye el cobro el cobro
-        administrativo de la cartera de su empresa en las etapas preventiva y
-        preurídica.
-      </p>
     </BaseServiceContent>
   );
 }

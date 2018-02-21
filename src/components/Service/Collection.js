@@ -62,7 +62,6 @@ export default function Collection({ color, background, iconName }) {
       <p>Cobro gestión de cobro persuasivo, preventivo y prejurídico.</p>
       <h3>SIN COMISIÓN</h3>
       <ul>
-        <li>En ninguno de nuestros servicios cobramos comisión.</li>
         <li>Planes para pequeña, mediana y gran empresa.</li>
         <li>
           Reciba reporte diario informándolo sobre el estado de su cartera.

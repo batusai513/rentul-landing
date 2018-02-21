@@ -68,22 +68,38 @@ export default function Footer() {
           <Column spacing={2} w={[1, 3 / 10]}>
             <h2 css={titleStyles}>Social</h2>
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               css={`
                 color: inherit;
                 font-size: 32px;
                 padding: 0 5px;
               `}
-              href="#"
+              href="https://www.facebook.com/RentulDefense"
             >
               <Icon name="facebook" />
             </a>
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               css={`
                 color: inherit;
                 font-size: 32px;
                 padding: 0 5px;
               `}
-              href="#"
+              href="https://twitter.com/Rentuldefense"
+            >
+              <Icon name="twitter" />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              css={`
+                color: inherit;
+                font-size: 32px;
+                padding: 0 5px;
+              `}
+              href="https://www.linkedin.com/company/27195337/"
             >
               <Icon name="twitter" />
             </a>

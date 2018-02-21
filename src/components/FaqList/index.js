@@ -15,7 +15,7 @@ export default function FaqList() {
       >
         <p>
           RENTUL DEFENSE es una casa de cobranza dedicada al acompañamiento
-          integral de todas las etapas del cobro de cartera en empresas
+          integral de todas las etapas del cobro de cartera en empresas y
           comercios, que en el desarrollo de su actividad otorguen algún tipo de
           crédito. Además, brinda respaldo y acompañamiento jurídico a
           arrendadores y administraciones de propiedad horizontal.
@@ -52,9 +52,12 @@ export default function FaqList() {
         }
       >
         <p>
-          Para procesos de cobro inferiores a ochenta millones de pesos, RENTUL
-          DEFENSE no cobra comisión en ninguno de los procesos: administrativo,
-          prejurídico y jurídico.
+          Hasta cobro prejurídico no cobramos comisión por ningún: puede
+          registrar todos los procesos que necesite y nuestro recurso humano y
+          tecnológico le cobrará todos los procesos. En procesos ejecutivos
+          (demandas) cobramos comisión de acuerdo al plan escogido: sin
+          permanencia, seis meses o un año. De acuerdo al tipo de contrato
+          también varía el valor de la mensualidad. Consulte lista de precios.
         </p>
       </FaqItem>
       <FaqItem
@@ -240,10 +243,7 @@ export default function FaqList() {
       </FaqItem>
       <FaqItem title={<Fragment>¿EL PLAN TIENE PERMANENCIA?</Fragment>}>
         <p>
-          El plan Básico tiene un pago mensual el cual no es renovable. Los
-          demás planes, que incluyen cobro jurídico, tienen un valor total que
-          se difiere a 12 cuotas mensuales y brinda todos los servicios durante
-          un año completo.
+          Hay planes sin y con permanencia. Consulte lista de precios.
         </p>
       </FaqItem>
       <FaqItem
