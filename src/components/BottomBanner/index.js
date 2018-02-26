@@ -43,7 +43,7 @@ export default function Banner() {
         <AnchorButton
           isRounded
           styles="primary"
-          href="https://www.rentul-defense.com/users/sign_in"
+          href="https://app.rentuldefense.com/users/sign_in"
         >
           Únete ahora
         </AnchorButton>

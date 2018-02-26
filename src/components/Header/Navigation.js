@@ -47,7 +47,7 @@ export default function Navigation() {
               css={`
                 ${isOpen ? activeStyle : ""};
               `}
-              href="https://www.rentul-defense.com/users/sign_in"
+              href="https://app.rentuldefense.com/users/sign_in"
             >
               Ingreso de usuario
             </NavAnchor>
@@ -56,7 +56,7 @@ export default function Navigation() {
           <LoginPopup />
         </Popover>*/}
         <NavAnchor
-          href="https://www.rentul-defense.com/users/sign_in"
+          href="https://app.rentuldefense.com/users/sign_in"
         >
           Ingreso de usuario
         </NavAnchor>
