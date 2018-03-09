@@ -32,6 +32,15 @@ module.exports = {
         pathToConfigModule: "src/utils/typography.js"
       }
     },
-    "gatsby-plugin-react-helmet"
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "img",
+        path: `${__dirname}/src/assets/images`
+      }
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp"
   ]
 };
