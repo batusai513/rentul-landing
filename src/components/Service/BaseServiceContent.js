@@ -81,7 +81,7 @@ export default function BaseContent({
       </header>
       <Container>
         <Box py={[2, 3]}>
-          <Flex wrap>
+          <Flex flexWrap="wrap">
             <Box
               css={`
                 text-align: center;

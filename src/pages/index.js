@@ -24,7 +24,7 @@ function IndexPage(props) {
       <Hero image={props.data.heroImage} />
       <Box is="section" py={[1, 2, 3, 4]}>
         <Container>
-          <Flex wrap>
+          <Flex flexWrap="wrap">
             <Box width={[1, 1 / 2, 1 / 3]} px={2}>
               <Service
                 color="#FF5830"

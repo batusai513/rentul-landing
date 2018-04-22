@@ -5,7 +5,7 @@ import { Button } from '../Buttons';
 
 export default function ContactForm() {
   return (
-    <Row spacing={1} wrap>
+    <Row spacing={1} flexWrap="wrap">
       <Column w={1} spacing={1} mb={1}>
         <Input dark type="text" placeholder="Nombre" />
       </Column>

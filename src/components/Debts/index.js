@@ -5,7 +5,7 @@ import Graph from "./Graph";
 
 export default function Debts() {
   return (
-    <Flex wrap>
+    <Flex flexWrap="wrap">
       <Box
         css={`
           text-align: right;

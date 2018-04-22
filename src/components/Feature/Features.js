@@ -1,8 +1,8 @@
-import React from "react";
-import { css } from "react-emotion";
-import { Box, Flex } from "grid-emotion";
-import Feature from "./index";
-import Container from "../Container";
+import React from 'react';
+import { css } from 'react-emotion';
+import { Box, Flex } from 'grid-emotion';
+import Feature from './index';
+import Container from '../Container';
 
 export default function Features() {
   return (
@@ -13,7 +13,7 @@ export default function Features() {
       `}
     >
       <Container>
-        <Flex wrap justify="center">
+        <Flex flexWrap="wrap" justify="center">
           {/*<Box
             css={`
               display: flex;

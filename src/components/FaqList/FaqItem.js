@@ -13,7 +13,7 @@ export default function FaqItem({ title, children }) {
       `}
     >
       <Container width={1080}>
-        <Flex wrap align="center">
+        <Flex flexWrap="wrap" align="center">
           <Box
             w={[1, 1 / 3]}
             css={`

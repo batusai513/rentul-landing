@@ -6,6 +6,7 @@ import ContactForm from "./ContactForm";
 import Container from "../Container";
 import Icon from "../Icon";
 import Media from "../Media";
+import SocialIcons from '../SocialIcons';
 
 const titleStyles = `
   font-size: 14px;
@@ -34,7 +35,7 @@ export default function Footer() {
       `}
     >
       <Container width={1024}>
-        <Row spacing={2} wrap>
+        <Row spacing={2} flexWrap="wrap">
           <Column spacing={2} w={[1, 3 / 10]}>
             <h2 css={titleStyles}>Encuéntranos</h2>
             <p css={findItem}>
@@ -67,42 +68,7 @@ export default function Footer() {
           </Column>
           <Column spacing={2} w={[1, 3 / 10]}>
             <h2 css={titleStyles}>Social</h2>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              css={`
-                color: inherit;
-                font-size: 32px;
-                padding: 0 5px;
-              `}
-              href="https://www.facebook.com/RentulDefense"
-            >
-              <Icon name="facebook" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              css={`
-                color: inherit;
-                font-size: 32px;
-                padding: 0 5px;
-              `}
-              href="https://twitter.com/Rentuldefense"
-            >
-              <Icon name="twitter" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              css={`
-                color: inherit;
-                font-size: 32px;
-                padding: 0 5px;
-              `}
-              href="https://www.linkedin.com/company/27195337/"
-            >
-              <Icon name="twitter" />
-            </a>
+            <SocialIcons />
           </Column>
         </Row>
         <hr

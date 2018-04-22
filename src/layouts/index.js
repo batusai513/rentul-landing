@@ -1,13 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import Footer from "../components/Footer";
-import "./index.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import Footer from '../components/Footer';
+import PromoBanner from '../components/PromoBanner';
+import './index.css';
 
 function renderOgTags(tags) {
   return Object.keys(tags).map(item => ({
     property: `og:${item}`,
-    content: tags[item],
+    content: tags[item]
   }));
 }
 
@@ -19,12 +20,13 @@ function TemplateWrapper(props) {
       <Helmet
         title={title}
         meta={[
-          { name: "description", content: description },
-          { name: "keywords", content: keywords },
+          { name: 'description', content: description },
+          { name: 'keywords', content: keywords },
           ...renderOgTags(openGraph)
         ]}
       />
       {children()}
+      <PromoBanner />
       <Footer />
       <svg
         aria-hidden="true"

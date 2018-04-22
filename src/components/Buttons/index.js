@@ -17,6 +17,8 @@ function style({ styles, theme, isBordered }) {
   switch (styles) {
     case "primary":
       return buttonStyle("white", theme.primaryColor, "", "1px", isBordered);
+    case "info":
+      return buttonStyle("white", theme.infoColor, theme.infoColor, "1px", isBordered);
     default:
       return "";
   }

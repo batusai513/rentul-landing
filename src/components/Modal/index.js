@@ -1,12 +1,12 @@
-import React, { Component, Fragment } from "react";
-import { Helmet } from "react-helmet";
-import ReactModal from "react-modal";
-import P from "prop-types";
-import Icon from "../Icon";
+import React, { Component, Fragment } from 'react';
+import { Helmet } from 'react-helmet';
+import ReactModal from 'react-modal';
+import P from 'prop-types';
+import Icon from '../Icon';
 
 class Modal extends Component {
   state = {
-    isOpen: false
+    isOpen: this.props.isOpen
   };
 
   onOpenHandler = () => {
@@ -22,7 +22,7 @@ class Modal extends Component {
     const { action, contentLabel, children } = this.props;
     return (
       <Fragment>
-        {typeof action === "function" ? (
+        {typeof action === 'function' ? (
           action(isOpen, this.onOpenHandler)
         ) : (
           <button
@@ -38,8 +38,8 @@ class Modal extends Component {
           onRequestClose={this.onCloseHandler}
           style={generateStyles()}
           closeTimeoutMS={250}
-          {...(typeof window !== "undefined"
-            ? { appElement: window.document.getElementById("___gatsby") }
+          {...(typeof window !== 'undefined'
+            ? { appElement: window.document.getElementById('___gatsby') }
             : {})}
         >
           <Fragment>
@@ -77,22 +77,22 @@ function buttonCloseStyles() {
 function generateStyles() {
   return {
     content: {
-      top: "0",
-      left: "0",
-      right: "auto",
-      bottom: "auto",
-      width: "100%",
-      height: "100%",
-      padding: "0",
-      borderRadius: "0",
-      border: "0",
-      overflowX: "hidden",
-      overflowY: "auto",
-      position: "fixed"
+      top: '0',
+      left: '0',
+      right: 'auto',
+      bottom: 'auto',
+      width: '100%',
+      height: '100%',
+      padding: '0',
+      borderRadius: '0',
+      border: '0',
+      overflowX: 'hidden',
+      overflowY: 'auto',
+      position: 'fixed'
     },
     overlay: {
-      zIndex: "2",
-      backgroundColor: "rgba(0, 0, 0, 0.5)"
+      zIndex: '2',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)'
     }
   };
 }
@@ -102,6 +102,10 @@ Modal.propTypes = {
   contentLabel: P.string,
   children: P.node,
   action: P.func
+};
+
+Modal.defaultProps = {
+  isOpen: false
 };
 
 export default Modal;

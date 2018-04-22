@@ -15,7 +15,7 @@ export default function PriceList() {
       >
         Escoja su plan de acuerdo a su necesidad.
       </h3>
-      <Flex wrap justify="center">
+      <Flex flexWrap="wrap" justify="center">
         <PriceItem
           title="Plan Básico"
           price={'210.000'}
