@@ -8,7 +8,7 @@ const textSizes = mq({ fontSize: [rem(22), rem(28), rem(34)] });
 const containerHeights = mq({ height: [rem(280), rem(360), rem(460)] });
 
 const Container = styled(Box)`
-  background-color: #0172B2;
+  background-color: #0172b2;
   background-image: url(${bg});
   display: flex;
   align-items: center;

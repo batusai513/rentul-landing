@@ -94,11 +94,6 @@ export default IndexPage;
 
 export const query = graphql`
   query homeQuery {
-    heroImage: imageSharp(id: { regex: "/main-banner/" }) {
-      sizes(maxWidth: 1920, quality: 95) {
-        ...GatsbyImageSharpSizes_withWebp
-      }
-    }
     site {
       siteMetadata {
         title
