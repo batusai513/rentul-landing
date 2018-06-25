@@ -1,5 +1,4 @@
 import React from 'react';
-import { css } from 'react-emotion';
 import { Box, Flex } from 'grid-emotion';
 import Feature from './index';
 import Container from '../Container';

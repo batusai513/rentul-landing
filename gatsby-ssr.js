@@ -5,14 +5,10 @@ import { ThemeProvider } from 'emotion-theming';
 
 const theme = {
   primaryColor: '#FFA330',
-  infoColor: '#0080C0'
+  infoColor: '#0080C0',
 };
 
-exports.replaceRenderer = ({
-  setHeadComponents,
-  bodyComponent,
-  replaceBodyHTMLString
-}) => {
+export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
   const ConnectedBody = () => (
     <ThemeProvider theme={theme}>{bodyComponent}</ThemeProvider>
   );

@@ -1,7 +1,6 @@
-import React from "react";
-import styled, { css } from "react-emotion";
-import Color from "color";
-import { rem, mq } from "../../utils/typography";
+import React from 'react';
+import Color from 'color';
+import { rem, mq } from '../../utils/typography';
 
 export default function Capital(props) {
   return (
@@ -58,7 +57,7 @@ function containerStyles(props) {
 
 function bannerStyles(props) {
   return `
-    background-image: url(${require("../../assets/images/money.jpg")});
+    background-image: url(${require('../../assets/images/money.jpg')});
     background-position: left center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,7 +72,7 @@ function bannerStyles(props) {
 
 function capitalHeadStyles(props) {
   return `
-    background-color: ${Color("#FFA330")
+    background-color: ${Color('#FFA330')
       .alpha(0.95)
       .hsl()};
     color: white;
@@ -89,14 +88,14 @@ function capitalContentContainer(props) {
   return `
     flex: 1;
     @media screen and (min-width: ${rem(780)}) {
-      margin-left: ${-238 / 1440 * 100}%;
+      margin-left: ${(-238 / 1440) * 100}%;
     }
   `;
 }
 
 function capitalBody(props) {
   return `
-    background-color: ${Color("#FFFAF3")
+    background-color: ${Color('#FFFAF3')
       .alpha(0.9)
       .hsl()};
     padding: ${rem(30)} ${rem(38)};

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { css } from "react-emotion";
-import { rem, mq } from "../../utils/typography";
+import { mq } from "../../utils/typography";
 
 const percentageStyles = css(
   mq({

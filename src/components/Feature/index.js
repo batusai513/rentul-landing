@@ -1,11 +1,7 @@
-import React from "react";
-import styled, { css } from "react-emotion";
-import { Box } from "grid-emotion";
-import Color from "color";
-import { Button } from "../Buttons";
-import Polygon from "../Polygon";
+import React from 'react';
+import Polygon from '../Polygon';
 
-export default function Feture({ title, body, extra, iconName = "" }) {
+export default function Feture({ title, body, extra, iconName = '' }) {
   return (
     <article
       css={`
@@ -14,10 +10,7 @@ export default function Feture({ title, body, extra, iconName = "" }) {
         margin: auto;
       `}
     >
-      <Polygon
-        iconName={iconName}
-        iconColor="#006FAE"
-      />
+      <Polygon iconName={iconName} iconColor="#006FAE" />
       <h3>{title}</h3>
       <p>{body}</p>
       {extra}

@@ -1,26 +1,23 @@
-import React from "react";
-import Link from "gatsby-link";
-import { Box, Flex } from "grid-emotion";
-import { css } from "react-emotion";
-import Features from "../components/Feature/Features";
-import Service from "../components/Service";
-import LegalProcess from "../components/Service/LegalProcess";
-import Collection from "../components/Service/Collection";
-import RealEstate from "../components/Service/RealEstate";
-import Hero from "../components/Hero";
-import Capital from "../components/Capital";
-import Alert from "../components/Alert";
-import Polygon from "../components/Polygon";
-import Debts from "../components/Debts";
-import Banner from "../components/BottomBanner";
-import Container from "../components/Container";
-import Header from "../components/Header";
+import React from 'react';
+import { Box, Flex } from 'grid-emotion';
+import Features from '../components/Feature/Features';
+import Service from '../components/Service';
+import LegalProcess from '../components/Service/LegalProcess';
+import Collection from '../components/Service/Collection';
+import RealEstate from '../components/Service/RealEstate';
+import Hero from '../components/Hero';
+import Capital from '../components/Capital';
+import Alert from '../components/Alert';
+import Debts from '../components/Debts';
+import Banner from '../components/BottomBanner';
+import Container from '../components/Container';
+import Header from '../components/Header';
+import Layout from '../components/Layout';
 
 function IndexPage(props) {
-  console.warn(props);
   return (
-    <React.Fragment>
-      <Header positioned background={"#006FAE"} />
+    <Layout>
+      <Header positioned background={'#006FAE'} />
       <Hero image={props.data.heroImage} />
       <Box is="section" py={[1, 2, 3, 4]}>
         <Container>
@@ -54,7 +51,7 @@ function IndexPage(props) {
                 iconName="house"
                 body={
                   <span>
-                    Arrendamientos Derecho <br /> inmobiliario en general <br />{" "}
+                    Arrendamientos Derecho <br /> inmobiliario en general <br />{' '}
                     Administración de propiedad horizontal
                   </span>
                 }
@@ -86,7 +83,7 @@ function IndexPage(props) {
       </Box>
 
       <Banner />
-    </React.Fragment>
+    </Layout>
   );
 }
 

@@ -1,8 +1,6 @@
-import React from "react";
-import Link from "gatsby-link";
-import styled, { css } from "react-emotion";
-import LoginPopup from "./LoginPopup";
-import Popover from "../Popover";
+import React from 'react';
+import Link from 'gatsby-link';
+import styled, { css } from 'react-emotion';
 
 const activeStyle = css`
   border-top-color: #ffa330 !important;
@@ -20,7 +18,7 @@ const NavLink = styled(Link)`
   border-top: 3px solid transparent;
 `;
 
-const NavAnchor = NavLink.withComponent("a");
+const NavAnchor = NavLink.withComponent('a');
 
 export default function Navigation() {
   return (
@@ -55,9 +53,7 @@ export default function Navigation() {
         >
           <LoginPopup />
         </Popover>*/}
-        <NavAnchor
-          href="https://app.rentuldefense.com/users/sign_in"
-        >
+        <NavAnchor href="https://app.rentuldefense.com/users/sign_in">
           Ingreso de usuario
         </NavAnchor>
       </div>

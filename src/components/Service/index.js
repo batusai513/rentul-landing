@@ -1,13 +1,11 @@
-import React from "react";
-import styled, { css } from "react-emotion";
-import { Box } from "grid-emotion";
-import Color from "color";
-import { Button } from "../Buttons";
-import Icon from "../Icon";
-import Polygon from "../Polygon";
-import Modal from "../Modal";
-import LegalProcess from "./LegalProcess";
-import { rem } from "../../utils/typography";
+import React from 'react';
+import styled, { css } from 'react-emotion';
+import { Box } from 'grid-emotion';
+import Color from 'color';
+import { Button } from '../Buttons';
+import Polygon from '../Polygon';
+import Modal from '../Modal';
+import { rem } from '../../utils/typography';
 
 const titleCss = css`
   font-size: ${rem(24)};
@@ -70,7 +68,7 @@ export default function Service({
   body,
   modalContent: ModalContent,
   color,
-  iconName
+  iconName,
 }) {
   const bg = Color(color)
     .alpha(0.8)

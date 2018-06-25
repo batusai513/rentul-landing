@@ -1,19 +1,15 @@
-import React from "react";
-import { Box } from "grid-emotion";
-import Modal from "../Modal";
-import Container from "../Container";
-import { Row, Column } from "../Grid";
-import Form from "./Form";
-import SocialIcons from "../SocialIcons";
-import promoImage from "./images/rentul-promo.jpg";
+import React from 'react';
+import { Box } from 'grid-emotion';
+import Modal from '../Modal';
+import promoImage from './images/rentul-promo.jpg';
 
-const titleStyles = `
-  font-size: 14px;
-  font-family: 'Open Sans';
-  margin-bottom: 2rem;
-  text-transform: uppercase;
-  color: white;
-`;
+// const titleStyles = `
+//   font-size: 14px;
+//   font-family: 'Open Sans';
+//   margin-bottom: 2rem;
+//   text-transform: uppercase;
+//   color: white;
+// `;
 
 export default function PromoBannerModal() {
   return (

@@ -1,11 +1,10 @@
-import React from "react";
-import styled from "react-emotion";
-import { Flex, Box } from "grid-emotion";
-import { Row, Column } from "../Grid";
-import ContactForm from "./ContactForm";
-import Container from "../Container";
-import Icon from "../Icon";
-import Media from "../Media";
+import React from 'react';
+import { Box } from 'grid-emotion';
+import { Row, Column } from '../Grid';
+import ContactForm from './ContactForm';
+import Container from '../Container';
+import Icon from '../Icon';
+import Media from '../Media';
 import SocialIcons from '../SocialIcons';
 
 const titleStyles = `
@@ -31,7 +30,7 @@ export default function Footer() {
       css={`
         background-color: #3e4543;
         color: white;
-        font-family: "Open Sans";
+        font-family: 'Open Sans';
       `}
     >
       <Container width={1024}>
@@ -86,7 +85,7 @@ export default function Footer() {
             margin-bottom: 0;
           `}
         >
-          © {getYear(new Date())} Rentul. All Rights Reserved{" "}
+          © {getYear(new Date())} Rentul. All Rights Reserved{' '}
         </p>
       </Container>
     </Box>

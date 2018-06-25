@@ -2,14 +2,15 @@ import React from "react";
 import Header from "../components/Header";
 import PageTitle from '../components/PageTitle';
 import FaqList from "../components/FaqList";
+import Layout from '../components/Layout';
 
 export default function Faq(props) {
   return (
-    <React.Fragment>
+    <Layout>
       <Header background={'#006FAE'} />
       <PageTitle title="Preguntas Frecuentes" />
       <FaqList />
-    </React.Fragment>
+    </Layout>
   );
 }
 

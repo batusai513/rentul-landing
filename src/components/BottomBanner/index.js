@@ -1,9 +1,8 @@
-import React from "react";
-import Link from "gatsby-link";
-import { Box } from "grid-emotion";
-import Container from "../Container";
-import { AnchorButton } from "../Buttons";
-import { rem, mq } from "../../utils/typography";
+import React from 'react';
+import { Box } from 'grid-emotion';
+import Container from '../Container';
+import { AnchorButton } from '../Buttons';
+import { rem, mq } from '../../utils/typography';
 
 const titleSizes = mq({ fontSize: [rem(24), rem(32), rem(36)] });
 const subTitleSizes = mq({ fontSize: [rem(16), rem(18), rem(24)] });
@@ -14,7 +13,7 @@ export default function Banner() {
       is="section"
       py={[1, 2, 3, 3]}
       css={`
-        background-image: url(${require("../../assets/images/bottom-image.jpg")});
+        background-image: url(${require('../../assets/images/bottom-image.jpg')});
         height: 237px;
         color: white;
         text-align: center;

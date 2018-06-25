@@ -4,10 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 
 const theme = {
   primaryColor: '#FFA330',
-  infoColor: '#0080C0'
+  infoColor: '#0080C0',
 };
 
-exports.replaceRouterComponent = () => {
+export const replaceRouterComponent = () => {
   const ConnectedRouterWrapper = ({ children }) => (
     <ThemeProvider theme={theme}>
       <BrowserRouter>{children}</BrowserRouter>

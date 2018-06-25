@@ -1,5 +1,5 @@
-import styled from "react-emotion";
-import { rem } from "../../utils/typography";
+import styled from 'react-emotion';
+import { rem } from '../../utils/typography';
 
 export const darkStyles = `
   background-color: #454E4D;
@@ -37,15 +37,15 @@ const base = props => `
     background-color: #CCCCCC;
     opacity: 1;
   };
-  ${props.dark == true ? darkStyles : ""}
-  ${props.light == true ? lightStyles : ""}
+  ${props.dark === true ? darkStyles : ''}
+  ${props.light === true ? lightStyles : ''}
 `;
 
-export const Input = styled("input")`
+export const Input = styled('input')`
   ${base};
 `;
 
-export const Textarea = styled("textarea")`
+export const Textarea = styled('textarea')`
   ${base};
   height: auto;
 `;

@@ -1,9 +1,8 @@
-import React from "react";
-import styled, { css } from "react-emotion";
-import Color from "color";
-import { rem } from "../../utils/typography";
+import styled, { css } from 'react-emotion';
+import Color from 'color';
+import { rem } from '../../utils/typography';
 
-export const Button = styled("button")(
+export const Button = styled('button')(
   base,
   style,
   rounded,
@@ -11,16 +10,22 @@ export const Button = styled("button")(
   bordered,
   block
 );
-export const AnchorButton = Button.withComponent("a");
+export const AnchorButton = Button.withComponent('a');
 
 function style({ styles, theme, isBordered }) {
   switch (styles) {
-    case "primary":
-      return buttonStyle("white", theme.primaryColor, "", "1px", isBordered);
-    case "info":
-      return buttonStyle("white", theme.infoColor, theme.infoColor, "1px", isBordered);
+    case 'primary':
+      return buttonStyle('white', theme.primaryColor, '', '1px', isBordered);
+    case 'info':
+      return buttonStyle(
+        'white',
+        theme.infoColor,
+        theme.infoColor,
+        '1px',
+        isBordered
+      );
     default:
-      return "";
+      return '';
   }
 }
 
@@ -29,7 +34,7 @@ function rounded({ isRounded }) {
     ? css`
         border-radius: 100px;
       `
-    : "";
+    : '';
 }
 
 function square({ isSquared }) {
@@ -41,7 +46,7 @@ function square({ isSquared }) {
         padding: 0;
         text-align: center;
       `
-    : "";
+    : '';
 }
 
 function bordered({ isBordered }) {
@@ -50,7 +55,7 @@ function bordered({ isBordered }) {
     background-Color: transparent;
     border-width: 2px;
   `
-    : "";
+    : '';
 }
 
 function block({ block }) {
@@ -60,7 +65,7 @@ function block({ block }) {
     padding-left: 0;
     padding-right: 0;
   `
-    : "";
+    : '';
 }
 
 function base(props) {
@@ -125,7 +130,7 @@ function buttonStyle($color, $background, $border, $borderWidth, isBordered) {
     &:active,
     &.active {
       color: ${$color};
-      border-color: ${$border == "transparent" ? $border : hover};
+      border-color: ${$border === 'transparent' ? $border : hover};
       background-color: ${hover};
     }
     &:active,

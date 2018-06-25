@@ -1,25 +1,25 @@
-import React from "react";
-import Link from "gatsby-link";
-import { css } from "react-emotion";
-import { Flex, Box } from "grid-emotion";
+import React from 'react';
+import { Link } from 'gatsby';
+import { css } from 'react-emotion';
+import { Flex, Box } from 'grid-emotion';
 import Logo from './Logo';
-import Container from "../Container";
-import Navigation from "./Navigation";
-import { rem } from "../../utils/typography";
+import Container from '../Container';
+import Navigation from './Navigation';
+import { rem } from '../../utils/typography';
 
 const Header = props => (
   <header
     css={css`
-      background: ${props.background ? props.background : "transparent"};
+      background: ${props.background ? props.background : 'transparent'};
       width: 100%;
       @media screen and (min-width: 640px) {
-        position: ${props.positioned ? "absolute" : "static"};
-        background: ${props.positioned && "transparent"};
+        position: ${props.positioned ? 'absolute' : 'static'};
+        background: ${props.positioned && 'transparent'};
       }
     `}
   >
     <Container>
-      <Flex flexDirection={["column", "row"]}>
+      <Flex flexDirection={['column', 'row']}>
         <Box width={[1, 1 / 4, 1 / 3]}>
           <h1
             css={`
@@ -37,8 +37,8 @@ const Header = props => (
             <Link
               to="/"
               style={{
-                color: "white",
-                textDecoration: "none"
+                color: 'white',
+                textDecoration: 'none',
               }}
             >
               <Logo />

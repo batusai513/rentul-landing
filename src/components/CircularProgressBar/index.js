@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const MIN_PERCENTAGE = 0;
 const MAX_PERCENTAGE = 100;
@@ -8,15 +8,32 @@ const MAX_Y = 100;
 const FULL_RADIUS = 50;
 const CENTER_X = 50;
 const CENTER_Y = 50;
-const STACK_PREFIX = "CircularProgressbar-path";
+const STACK_PREFIX = 'CircularProgressbar-path';
 const TRAIL_OFFSET = 2;
 
 class CircularProgressbar extends React.Component {
+  static getderivedstatefromprops(nextProps) {
+    let state = {
+      percentage: nextProps.percentage,
+    };
+
+    if (
+      nextProps.stackPercentages &&
+      Array.isArray(nextProps.stackPercentages)
+    ) {
+      nextProps.stackPercentages.forEach(
+        (p, idx) => (state[`path-${idx}`] = p.value)
+      );
+    }
+
+    return state;
+  }
+
   constructor(props) {
     super(props);
 
     let state = {
-      percentage: props.initialAnimation ? 0 : props.percentage
+      percentage: props.initialAnimation ? 0 : props.percentage,
     };
 
     if (props.stackPercentages && Array.isArray(props.stackPercentages)) {
@@ -33,7 +50,7 @@ class CircularProgressbar extends React.Component {
       this.initialTimeout = setTimeout(() => {
         this.requestAnimationFrame = window.requestAnimationFrame(() => {
           let state = {
-            percentage: this.props.percentage
+            percentage: this.props.percentage,
           };
 
           if (
@@ -49,23 +66,6 @@ class CircularProgressbar extends React.Component {
         });
       }, 0);
     }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    let state = {
-      percentage: nextProps.percentage
-    };
-
-    if (
-      nextProps.stackPercentages &&
-      Array.isArray(nextProps.stackPercentages)
-    ) {
-      nextProps.stackPercentages.forEach(
-        (p, idx) => (state[`path-${idx}`] = p.value)
-      );
-    }
-
-    this.setState(state);
   }
 
   componentWillUnmount() {
@@ -108,16 +108,16 @@ class CircularProgressbar extends React.Component {
       Math.max(percentage, MIN_PERCENTAGE),
       MAX_PERCENTAGE
     );
-    const dashoffset = (100 - truncatedPercentage) / 100 * diameter;
-    const stackOffsetDegrees = stackOffsetPercent / 100 * 360;
+    const dashoffset = ((100 - truncatedPercentage) / 100) * diameter;
+    const stackOffsetDegrees = (stackOffsetPercent / 100) * 360;
 
     return {
       strokeDasharray: `${diameter}px ${diameter}px`,
       strokeDashoffset: `${
         this.props.counterClockwise ? -dashoffset : dashoffset
       }px`,
-      transformOrigin: "center",
-      transform: `rotate(${stackOffsetDegrees}deg)`
+      transformOrigin: 'center',
+      transform: `rotate(${stackOffsetDegrees}deg)`,
     };
   }
 
@@ -135,16 +135,16 @@ class CircularProgressbar extends React.Component {
     const {
       percentage,
       stackPercentages,
-      textForPercentage,
+      // textForPercentage,
       className,
       classes,
-      strokeWidth
+      strokeWidth,
     } = this.props;
     const classForPercentage = this.props.classForPercentage
       ? this.props.classForPercentage(percentage)
-      : "";
+      : '';
     const pathDescription = this.getPathDescription();
-    const text = textForPercentage ? textForPercentage(percentage) : null;
+    // const text = textForPercentage ? textForPercentage(percentage) : null;
 
     const stackPercentagesPaths = stackPercentages
       ? stackPercentages.map((p, idx) => {
@@ -218,7 +218,7 @@ CircularProgressbar.propTypes = {
     path: PropTypes.string,
     text: PropTypes.string,
     background: PropTypes.string,
-    stackPaths: PropTypes.array
+    stackPaths: PropTypes.array,
   }),
   strokeWidth: PropTypes.number,
   background: PropTypes.bool,
@@ -226,26 +226,26 @@ CircularProgressbar.propTypes = {
   initialAnimation: PropTypes.bool,
   counterClockwise: PropTypes.bool,
   classForPercentage: PropTypes.func,
-  textForPercentage: PropTypes.func
+  textForPercentage: PropTypes.func,
 };
 
 CircularProgressbar.defaultProps = {
   strokeWidth: 8,
-  className: "",
+  className: '',
   classes: {
-    root: "CircularProgressbar",
-    trail: "CircularProgressbar-trail",
-    path: "CircularProgressbar-path",
-    text: "CircularProgressbar-text",
-    background: "CircularProgressbar-background",
-    stackPaths: []
+    root: 'CircularProgressbar',
+    trail: 'CircularProgressbar-trail',
+    path: 'CircularProgressbar-path',
+    text: 'CircularProgressbar-text',
+    background: 'CircularProgressbar-background',
+    stackPaths: [],
   },
   background: false,
   backgroundPadding: null,
   initialAnimation: false,
   counterClockwise: false,
   classForPercentage: null,
-  textForPercentage: percentage => `${percentage}%`
+  textForPercentage: percentage => `${percentage}%`,
 };
 
 export default CircularProgressbar;
