@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import Footer from '../Footer';
-import PromoBanner from '../PromoBanner';
 import './index.css';
 
 function renderOgTags(tags) {
@@ -54,7 +53,6 @@ export default function Layout(props) {
               ]}
             />
             {children}
-            <PromoBanner />
             <Footer />
             <svg
               aria-hidden="true"
