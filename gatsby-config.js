@@ -3,14 +3,14 @@ module.exports = {
     title: 'Rentul Defense | Agencia de Cobranzas',
     image: 'https://s3-sa-east-1.amazonaws.com/rentul-defense/emails/logo.jpeg',
     description:
-      'Jurídico - Prejurídico - Persuasivo | Nos encargamos de su cartera.',
-    keywords: 'Cobranza, agencia, abogados',
+      'Controle todas las etapas del cobro de cartera.',
+    keywords: 'Cobranza, agencia, abogados, cobro jurídico, cobro prejurídico, recuperar cartera, cartera',
     more: 'hola',
     openGraph: {
       locale: 'es_ES',
       title: 'Rentul Defense | Agencia de Cobranzas',
       description:
-        'Jurídico - Prejurídico - Persuasivo | Nos encargamos de su cartera.',
+        'Controle todas las etapas del cobro de cartera.',
       url: 'www.rentuldefense.com',
       image:
         'https://s3-sa-east-1.amazonaws.com/rentul-defense/emails/logo.jpeg',
